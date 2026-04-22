@@ -1,4 +1,5 @@
- 📌 Intelligent Ticket Allocation & Priority Management System
+ 📌 Intelligent Ticket Allocation & Priority Management System       
+ // Team members: Shruti Ambekar, Ketaki Bhate, Gayatri Bhujbal, Shreya Dhage
 
 ## 🚀 Overview
 This project is a backend-based **Ticket Management System** that automatically categorizes, prioritizes, and allocates support tickets to agents using a smart rule-based engine.
