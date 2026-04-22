@@ -1,1 +1,70 @@
+ 📌 Intelligent Ticket Allocation & Priority Management System
 
+## 🚀 Overview
+This project is a backend-based **Ticket Management System** that automatically categorizes, prioritizes, and allocates support tickets to agents using a smart rule-based engine.
+
+It simulates real-world support systems used in **fintech, e-commerce, and IT helpdesk platforms**.
+
+---
+
+## ⚙️ Features
+
+### 📥 1. Automatic Ticket Categorization
+- Tickets are assigned to departments based on description analysis
+- Uses keyword matching + fuzzy matching (edit distance)
+
+---
+
+### ⚡ 2. Priority Calculation Engine
+Each ticket gets a priority score based on:
+
+- ⏳ Time urgency (time window)
+- 📈 Ticket age
+- 👑 Customer type (Gold / Silver / Normal)
+
+**Formula:**
+Priority Score = (0.5 × urgency) + (0.3 × age) + (0.2 × customer weight)
+---
+
+### 🧑‍💼 3. Smart Agent Allocation
+- Assigns ticket to least-loaded available agent
+- Department-wise agent grouping
+- Dynamic workload tracking
+
+---
+
+### 🔺 4. Supervisor Escalation System
+- High-priority tickets (score ≥ threshold) are escalated
+- If no agent is available, supervisor handles the ticket
+
+---
+
+### 📊 5. Priority Queue Processing
+- Each department uses a **Max Heap (PriorityQueue)**
+- Ensures highest priority tickets are processed first
+
+---
+
+### 🗄️ 6. MySQL Database Integration
+Handles persistent storage using:
+
+- `ticket` → pending tickets
+- `allocated` → assigned tickets
+- `agent` → agent + supervisor data
+
+---
+
+## 🏗️ System Architecture
+Incoming Tickets
+↓
+Category Detection
+↓
+Priority Calculation
+↓
+Department-wise Priority Queue
+↓
+Agent Allocation Engine
+↓
+Database Update (Allocated / Pending)
+
+---
