@@ -4,7 +4,7 @@
  Video Link:https://drive.google.com/file/d/115Y2reyiKUBwzyF7gIVrZI4j2Sl-MwMU/view
 
 ## 🚀 Overview
-This project is a backend-based **Ticket Management System** that automatically categorizes, prioritizes, and allocates support tickets to agents using a smart rule-based engine.
+This project is a dsa-based **Ticket Management System** that automatically categorizes, prioritizes, and allocates support tickets to agents using a smart rule-based engine.
 
 It simulates real-world support systems used in **fintech, e-commerce, and IT helpdesk platforms**.
 
@@ -14,7 +14,7 @@ It simulates real-world support systems used in **fintech, e-commerce, and IT he
 
 ### 📥 1. Automatic Ticket Categorization
 - Tickets are assigned to departments based on description analysis
-- Uses keyword matching + fuzzy matching (edit distance)
+- Uses keyword matching 
 
 ---
 
@@ -33,13 +33,14 @@ Priority Score = (0.5 × urgency) + (0.3 × age) + (0.2 × customer weight)
 - Assigns ticket to least-loaded available agent
 - Department-wise agent grouping
 - Dynamic workload tracking
+- If no agent available, then the high priority tickets are assigned to supervisor which is hierarchially senior to the agents.
 
 ---
 
 ### 🔺 4. Supervisor Escalation System
 - High-priority tickets (score ≥ threshold) are escalated
 - If no agent is available, supervisor handles the ticket
-
+- This ensures that the critical and time sensitive issues get resolved in time.
 ---
 
 ### 📊 5. Priority Queue Processing
@@ -50,11 +51,7 @@ Priority Score = (0.5 × urgency) + (0.3 × age) + (0.2 × customer weight)
 
 ### 🗄️ 6. MySQL Database Integration
 Handles persistent storage using:
-
-- `ticket` → pending tickets
-- `allocated` → assigned tickets
-- `agent` → agent + supervisor data
-
+This allows enhancement of console-based project
 ---
 
 ## 🏗️ System Architecture
