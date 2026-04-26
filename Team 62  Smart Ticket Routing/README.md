@@ -25,7 +25,7 @@ Each ticket gets a priority score based on:
 - Ticket age
 - Customer type (Gold / Silver / Normal)
 
-**Formula:**
+Formula:
 Priority Score = (0.5 × urgency) + (0.3 × age) + (0.2 × customer weight)
 ---
 
